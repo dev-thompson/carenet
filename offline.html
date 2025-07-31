@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareNet Offline</title>
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-5">
+                        <i class="fas fa-wifi-slash fa-5x text-primary mb-4"></i>
+                        <h1 class="display-5 fw-bold mb-3">You're Offline</h1>
+                        <p class="lead mb-4">Don't worry! CareNet works without internet. You can still access basic health information and your stored data.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="/" class="btn btn-primary px-4">Try Again</a>
+                            <a href="./login.html" class="btn btn-outline-primary px-4">Health Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./service-worker.js"></script>
+</body>
+</html>

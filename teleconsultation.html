@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareNet | Teleconsultation</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./icon/css/all.css">
+    <style>
+        :root {
+            --primary-color: #2c7be5;
+            --secondary-color: #6e84a3;
+            --success-color: #00d97e;
+            --danger-color: #e63757;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .consultation-container {
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        
+        .video-container {
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        
+        .doctor-info-card {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .patient-info-card {
+            border-left: 4px solid var(--success-color);
+        }
+        
+        .consultation-tools {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0.125rem 0.625rem rgba(90, 97, 105, 0.1);
+        }
+        
+        .tool-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .tool-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .chat-container {
+            height: 400px;
+            overflow-y: auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .chat-message {
+            max-width: 80%;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            border-radius: 18px;
+        }
+        
+        .doctor-message {
+            background-color: #e3f2fd;
+            border-bottom-left-radius: 5px;
+            margin-right: auto;
+        }
+        
+        .patient-message {
+            background-color: var(--primary-color);
+            color: white;
+            border-bottom-right-radius: 5px;
+            margin-left: auto;
+        }
+        
+        .prescription-item {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .vitals-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            height: 100%;
+        }
+        
+        .vital-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .consultation-tab {
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .consultation-tab.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .video-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="consultation-container">
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-video me-2"></i>Teleconsultation</h2>
+            <a href="dashboard.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-1"></i> Back to Dashboard
+            </a>
+        </div>
+        
+        <div class="row">
+            <!-- Main Video Column -->
+            <div class="col-lg-8">
+                <!-- Video Container -->
+                <div class="video-container mb-4">
+                    <div class="ratio ratio-16x9">
+                        <!-- Doctor Video Feed -->
+                        <video id="doctorVideo" autoplay playsinline></video>
+                        <!-- Patient Video PIP -->
+                        <div class="position-absolute" style="bottom: 20px; right: 20px; width: 25%;">
+                            <video id="patientVideo" autoplay playsinline muted class="rounded shadow"></video>
+                        </div>
+                    </div>
+                    
+                    <!-- Consultation Controls -->
+                    <div class="position-absolute bottom-0 start-0 end-0 bg-dark bg-opacity-50 p-3 d-flex justify-content-center gap-3">
+                        <div class="tool-btn bg-white" title="Mute Audio">
+                            <i class="fas fa-microphone text-primary"></i>
+                        </div>
+                        <div class="tool-btn bg-white" title="Turn Off Video">
+                            <i class="fas fa-video text-primary"></i>
+                        </div>
+                        <div class="tool-btn bg-danger" title="End Call">
+                            <i class="fas fa-phone-alt text-white"></i>
+                        </div>
+                        <div class="tool-btn bg-white" title="Screen Share">
+                            <i class="fas fa-desktop text-primary"></i>
+                        </div>
+                        <div class="tool-btn bg-white" title="Record Session">
+                            <i class="fas fa-circle text-danger"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor & Patient Info -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card doctor-info-card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar bg-primary text-white me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Dr. Adebayo Okafor</h5>
+                                        <p class="mb-1 text-muted">Cardiologist</p>
+                                        <span class="badge bg-success">
+                                            <i class="fas fa-circle me-1" style="font-size: 0.5rem;"></i> Online
+                                        </span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <small class="text-muted">Experience</small>
+                                        <p class="mb-0">15 years</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">Language</small>
+                                        <p class="mb-0">English, Yoruba</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card patient-info-card h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="avatar bg-success text-white me-3" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                        JD
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">John Doe</h5>
+                                        <p class="mb-1 text-muted">Patient</p>
+                                        <span class="badge bg-primary">
+                                            <i class="fas fa-circle me-1" style="font-size: 0.5rem;"></i> In Consultation
+                                        </span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <small class="text-muted">Age</small>
+                                        <p class="mb-0">35 years</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted">Blood Type</small>
+                                        <p class="mb-0">O+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Consultation Tools -->
+                <div class="consultation-tools mb-4">
+                    <h5 class="mb-3"><i class="fas fa-tools me-2"></i>Consultation Tools</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="tool-btn bg-primary" title="Vitals Monitor">
+                            <i class="fas fa-heartbeat text-white"></i>
+                        </div>
+                        <div class="tool-btn bg-primary" title="Share File">
+                            <i class="fas fa-file-upload text-white"></i>
+                        </div>
+                        <div class="tool-btn bg-primary" title="Whiteboard">
+                            <i class="fas fa-chalkboard text-white"></i>
+                        </div>
+                        <div class="tool-btn bg-primary" title="Prescription">
+                            <i class="fas fa-prescription text-white"></i>
+                        </div>
+                        <div class="tool-btn bg-primary" title="Medical History">
+                            <i class="fas fa-file-medical text-white"></i>
+                        </div>
+                        <div class="tool-btn bg-primary" title="Translator">
+                            <i class="fas fa-language text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Sidebar Column -->
+            <div class="col-lg-4">
+                <!-- Consultation Tabs -->
+                <ul class="nav nav-pills mb-3" id="consultationTabs">
+                    <li class="nav-item">
+                        <div class="nav-link consultation-tab active" data-bs-target="#chatTab">
+                            <i class="fas fa-comments me-1"></i> Chat
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link consultation-tab" data-bs-target="#prescriptionTab">
+                            <i class="fas fa-prescription me-1"></i> Prescription
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link consultation-tab" data-bs-target="#vitalsTab">
+                            <i class="fas fa-heartbeat me-1"></i> Vitals
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Chat Tab -->
+                    <div class="tab-pane fade show active" id="chatTab">
+                        <div class="chat-container mb-3">
+                            <div class="chat-message doctor-message">
+                                <strong>Dr. Okafor:</strong> Hello John, how are you feeling today?
+                                <div class="text-end text-muted" style="font-size: 0.7rem;">10:02 AM</div>
+                            </div>
+                            <div class="chat-message patient-message">
+                                <strong>You:</strong> Good morning doctor. I've been having chest pains since yesterday.
+                                <div class="text-end text-white-50" style="font-size: 0.7rem;">10:03 AM</div>
+                            </div>
+                            <div class="chat-message doctor-message">
+                                <strong>Dr. Okafor:</strong> I see. Can you describe the pain? Is it sharp or dull?
+                                <div class="text-end text-muted" style="font-size: 0.7rem;">10:04 AM</div>
+                            </div>
+                            <div class="chat-message patient-message">
+                                <strong>You:</strong> It's more of a dull ache, mostly on the left side.
+                                <div class="text-end text-white-50" style="font-size: 0.7rem;">10:05 AM</div>
+                            </div>
+                            <div class="chat-message doctor-message">
+                                <strong>Dr. Okafor:</strong> Thank you. I'm going to check your vitals now.
+                                <div class="text-end text-muted" style="font-size: 0.7rem;">10:06 AM</div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Type your message...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Prescription Tab -->
+                    <div class="tab-pane fade" id="prescriptionTab">
+                        <div class="chat-container">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i> Prescription will appear here after doctor's review
+                            </div>
+                            
+                            <!-- Sample Prescription (would be generated by doctor) -->
+                            <div class="prescription-item">
+                                <h6>Amoxicillin 500mg</h6>
+                                <p class="mb-1 text-muted">1 tablet every 8 hours for 7 days</p>
+                                <small class="text-muted">For bacterial infection</small>
+                            </div>
+                            <div class="prescription-item">
+                                <h6>Ibuprofen 400mg</h6>
+                                <p class="mb-1 text-muted">1 tablet every 6 hours as needed for pain</p>
+                                <small class="text-muted">For chest discomfort</small>
+                            </div>
+                            <div class="prescription-item">
+                                <h6>Omeprazole 20mg</h6>
+                                <p class="mb-1 text-muted">1 capsule daily before breakfast</p>
+                                <small class="text-muted">For acid reflux</small>
+                            </div>
+                            
+                            <div class="mt-3 p-2 bg-light rounded">
+                                <small class="text-muted">Doctor's Notes:</small>
+                                <p class="mb-0">Follow up in 2 weeks if symptoms persist. Avoid strenuous activity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vitals Tab -->
+                    <div class="tab-pane fade" id="vitalsTab">
+                        <div class="chat-container">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="vitals-card">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <small class="text-muted">Heart Rate</small>
+                                                <h3 class="vital-value text-danger">82</h3>
+                                                <small>bpm</small>
+                                            </div>
+                                            <i class="fas fa-heartbeat text-danger fa-2x"></i>
+                                        </div>
+                                        <div class="progress mt-2" style="height: 5px;">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 65%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="vitals-card">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <small class="text-muted">Blood Pressure</small>
+                                                <h3 class="vital-value text-primary">120/80</h3>
+                                                <small>mmHg</small>
+                                            </div>
+                                            <i class="fas fa-tint text-primary fa-2x"></i>
+                                        </div>
+                                        <div class="progress mt-2" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="vitals-card">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <small class="text-muted">Oxygen</small>
+                                                <h3 class="vital-value text-success">98%</h3>
+                                                <small>SpO2</small>
+                                            </div>
+                                            <i class="fas fa-lungs text-success fa-2x"></i>
+                                        </div>
+                                        <div class="progress mt-2" style="height: 5px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 98%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="vitals-card">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <small class="text-muted">Temperature</small>
+                                                <h3 class="vital-value text-warning">36.7°C</h3>
+                                                <small>oral</small>
+                                            </div>
+                                            <i class="fas fa-thermometer-half text-warning fa-2x"></i>
+                                        </div>
+                                        <div class="progress mt-2" style="height: 5px;">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <small class="text-muted">Last Updated:</small>
+                                <p class="mb-0">2 minutes ago via IoT wearable device</p>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 mt-3">
+                                <i class="fas fa-sync-alt me-2"></i> Refresh Vitals
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.consultation-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                // Show corresponding tab content
+                const target = this.getAttribute('data-bs-target');
+                document.querySelectorAll('.tab-pane').forEach(pane => {
+                    pane.classList.remove('show', 'active');
+                });
+                document.querySelector(target).classList.add('show', 'active');
+            });
+        });
+        
+        // Simulate video elements (in a real app these would be WebRTC streams)
+        document.addEventListener('DOMContentLoaded', function() {
+            // This is just for demonstration - in a real app you would:
+            // 1. Get user media for patientVideo
+            // 2. Receive doctor's stream via WebRTC
+            const doctorVideo = document.getElementById('doctorVideo');
+            const patientVideo = document.getElementById('patientVideo');
+            
+            // For demo purposes, we'll just show placeholder text
+            doctorVideo.innerHTML = `
+                <div style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;background-color:#333;color:white;">
+                    <div style="text-align:center;">
+                        <i class="fas fa-user-md fa-5x mb-3"></i>
+                        <h3>Dr. Okafor's Video Feed</h3>
+                        <p>Consultation in progress</p>
+                    </div>
+                </div>
+            `;
+            
+            patientVideo.innerHTML = `
+                <div style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;background-color:#555;color:white;">
+                    <div style="text-align:center;">
+                        <i class="fas fa-user fa-3x mb-2"></i>
+                        <p>Your Camera</p>
+                    </div>
+                </div>
+            `;
+            
+            // Simulate end call button
+            document.querySelector('.tool-btn.bg-danger').addEventListener('click', function() {
+                if(confirm('Are you sure you want to end the consultation?')) {
+                    alert('Consultation ended. Returning to dashboard...');
+                    window.location.href = 'dashboard.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

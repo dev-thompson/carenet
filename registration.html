@@ -1,0 +1,112 @@
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/registration.css">
+    <title>CareNet - Create Account</title>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="logo-container">
+            <div class="logo"><img src="./img/IMG-20250615-WA0265_2_-removebg-preview-1.png" alt=""></div>
+            <div class="logo-subtitle">Your Health, Connected</div>
+        </div>
+
+        <div class="registration-header">
+            <h1 class="registration-title">Create Account</h1>
+            <p class="registration-subtitle">Join CareNet to access quality healthcare services</p>
+        </div>
+
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="input-container">
+                        <input type="text" class="form-input" placeholder="First Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input type="text" class="form-input" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <div class="input-container">
+                    <input type="email" class="form-input" placeholder="Email Address" required>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <div class="input-container">
+                    <input type="tel" class="form-input" placeholder="Phone Number" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <div class="input-container">
+                        <input type="password" class="form-input" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-container">
+                        <input type="password" class="form-input" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="date" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <select class="form-select" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <select class="form-select" required>
+                    <option value="">I am registering as...</option>
+                    <option value="patient">Patient</option>
+                    <option value="doctor">Healthcare Provider</option>
+                    <option value="nurse">Nurse</option>
+                    <option value="admin">Hospital Administrator</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" class="checkbox-input" required>
+                <label for="terms" class="checkbox-label">
+                    I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="newsletter" class="checkbox-input">
+                <label for="newsletter" class="checkbox-label">
+                    I would like to receive health tips and updates from CareNet
+                </label>
+            </div>
+
+            <button type="submit" class="registration-btn">Create Account</button>
+        </form>
+
+        <div class="divider">
+            <span>or</span>
+        </div>
+
+        <div class="login-link">
+            Already have an account? <a href="login.html">Sign In</a>
+        </div>
+
+        <div class="footer-info">
+            Secure • Trusted Healthcare Platform
+        </div>
+    </div>
+</body>
+</html>

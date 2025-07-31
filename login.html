@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareNet | Login</title>
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./icon/css/all.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 32px;
+            margin-top: 20px;
+        }
+
+        .logo img{
+            color: white;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+        }
+
+        .logo-subtitle {
+            color: #2196f3;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .login-title {
+            color: #0d47a1;
+            font-size: 29px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .login-subtitle {
+            color: #78909c;
+            font-size: 15px;
+        }
+        .login-section {
+            background: url('./img/IMG-20250616-WA0077.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .login-overlay {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .login-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .login-logo{
+            background-color: white;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+            
+        }
+        .login-btn {
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 10px 25px;
+        }
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="login-section">
+    <div class="login-overlay d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="login-card bg-white">
+                    <div class="logo-container">
+                        <div class="logo">
+                           <a href="index.html"><img src="./img/IMG-20250615-WA0265_2_-removebg-preview-1.png" alt=""></a> 
+                        </div>
+                        <div class="logo-subtitle">Your Health, Connected</div>
+                    </div>
+
+                <div class="login-header">
+                    <h1 class="login-title">Welcome Back</h1>
+                    <p class="login-subtitle">Sign in to access your healthcare dashboard</p>
+                </div>
+
+                        <div class="card-body p-4 p-md-5">
+                            <form id="loginForm">
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light">
+                                            <i class="fas fa-envelope text-primary"></i>
+                                        </span>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light">
+                                            <i class="fas fa-lock text-primary"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <a href="forgot_password.html" class="text-primary">Forgot password?</a>
+                                </div>
+                                <div class="d-grid mb-4">
+                                    <button type="submit" class="btn btn-primary login-btn py-3">Login
+                                    </button>
+                                </div>
+                                <div class="divider my-4"></div>
+                                <div class="text-center">
+                                    <p class="mb-3">Or login with</p>
+                                    <div class="d-flex justify-content-center gap-3">
+                                        <a href="#" class="btn btn-outline-primary rounded-circle social-login">
+                                            <i class="fab fa-google"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary rounded-circle social-login">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline-primary rounded-circle social-login">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer bg-light text-center py-3">
+                            <p class="mb-0">Don't have an account? <a href="registration.html" class="text-primary">Sign up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        });
+
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally validate and send to server
+            // For demo, we'll redirect to dashboard
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

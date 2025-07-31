@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CareNet - Offline-Ready Smart Telehealth for Africa">
+    <meta name="theme-color" content="#0d6efd">
+    <title>CareNet | Smart Telehealth for Rural Africa</title>
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./icon/css/all.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192x192.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-ash fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="side-logo py-2">
+          <img width="150" src="./img/logo-main.png" alt="">
+      </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-primary" href="#download">Download App</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="login.html" class="btn btn-outline-primary ms-2">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<header id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative">
+        <div class="row align-items-center min-vh-80">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h1 class="display-3 fw-bold mb-4 text-white">Healthcare Revolution for Rural Africa</h1>
+                <p class="lead mb-4 text-white-75">Solar-powered, offline-ready telehealth platform connecting communities to quality medical services through innovative technology.</p>
+                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                    <a href="#services" class="btn btn-primary btn-lg px-4 py-3 rounded-pill shadow">
+                        <i class="fas fa-heartbeat me-2"></i>Our Services
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill shadow">
+                        <i class="fas fa-play-circle me-2"></i> How It Works
+                    </a>
+                </div>
+                <div class="d-flex flex-wrap gap-3 mt-4 justify-content-center justify-content-lg-start">
+                    <div class="badge bg-white text-dark px-3 py-2 rounded-pill">
+                        <i class="fas fa-wifi-slash text-primary me-1"></i> <a href="./offline.html">Offline Capable</a>
+                    </div>
+                    <div class="badge bg-white text-dark px-3 py-2 rounded-pill">
+                        <i class="fas fa-solar-panel text-success me-1"></i> Solar Powered
+                    </div>
+                    <div class="badge bg-white text-dark px-3 py-2 rounded-pill">
+                        <i class="fas fa-mobile-alt text-info me-1"></i> USSD Access
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll-down">
+        <a href="#services" class="text-white">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</header>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h3 class="fw-bold mb-1">10,000+</h3>
+                    <p class="mb-0">Lives Impacted</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fw-bold mb-1">500+</h3>
+                    <p class="mb-0">Villages Reached</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fw-bold mb-1">24/7</h3>
+                    <p class="mb-0">Offline Support</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fw-bold mb-1">100%</h3>
+                    <p class="mb-0">Solar Powered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Innovative Features for Rural Healthcare</h2>
+                <p class="lead text-muted">Designed specifically for Africa's unique challenges</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-opacity-10 text-primary mb-4">
+                                <i class="fas fa-wifi-slash fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Offline-First Design</h3>
+                            <p class="text-muted">Works without internet by caching data locally and syncing when connection is available.</p>
+                            <ul class="text-muted ps-3">
+                                <li>Local data storage</li>
+                                <li>Background sync</li>
+                                <li>Progressive Web App</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-success bg-opacity-10 text-success mb-4">
+                                <i class="fas fa-solar-panel fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Solar-Powered Kiosks</h3>
+                            <p class="text-muted">Raspberry Pi-powered edge computing kiosks for areas with no electricity.</p>
+                            <ul class="text-muted ps-3">
+                                <li>Low power consumption</li>
+                                <li>Community access points</li>
+                                <li>Local data processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-info bg-opacity-10 text-info mb-4">
+                                <i class="fas fa-language fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Multilingual Support</h3>
+                            <p class="text-muted">Health education and chatbot in English and local languages like Igbo.</p>
+                            <ul class="text-muted ps-3">
+                                <li>Voice/Text interface</li>
+                                <li>Culturally appropriate</li>
+                                <li>Simple terminology</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-warning bg-opacity-10 text-warning mb-4">
+                                <i class="fas fa-shield-alt fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">Blockchain Security</h3>
+                            <p class="text-muted">Decentralized, tamper-proof health records using Ethereum/Hyperledger.</p>
+                            <ul class="text-muted ps-3">
+                                <li>Patient data privacy</li>
+                                <li>Immutable records</li>
+                                <li>Consent management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-danger bg-opacity-10 text-danger mb-4">
+                                <i class="fas fa-mobile-alt fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">USSD/IVR Access</h3>
+                            <p class="text-muted">Full functionality even on basic phones via Africa's Talking API.</p>
+                            <ul class="text-muted ps-3">
+                                <li>No smartphone needed</li>
+                                <li>Menu-based navigation</li>
+                                <li>SMS follow-ups</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-purple bg-opacity-10 text-purple mb-4">
+                                <i class="fas fa-heartbeat fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">IoT Vitals Monitoring</h3>
+                            <p class="text-muted">Low-cost wearable devices for remote patient monitoring.</p>
+                            <ul class="text-muted ps-3">
+                                <li>Blood pressure</li>
+                                <li>Temperature</li>
+                                <li>Pulse oximetry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">How CareNet Works</h2>
+                <p class="lead text-muted">Bringing healthcare to the hardest-to-reach communities</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="./img/download (3).jpg" width="100%" alt="CareNet kiosk in a village" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <div class="d-flex mb-4">
+                            <div class="me-4">
+                                <div class="step-number bg-primary text-white">1</div>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold">Access the Platform</h3>
+                                <p class="text-muted mb-0">Connect via smartphone app, USSD code, or visit a community kiosk powered by solar energy.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-4">
+                                <div class="step-number bg-primary text-white">2</div>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold">Choose Your Service</h3>
+                                <p class="text-muted mb-0">Select from video consultation, health information, vaccination reminders, or vitals monitoring.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="me-4">
+                                <div class="step-number bg-primary text-white">3</div>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold">Get Medical Attention</h3>
+                                <p class="text-muted mb-0">Connect with healthcare professionals or access automated services in your preferred language.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="me-4">
+                                <div class="step-number bg-primary text-white">4</div>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold">Follow-Up Care</h3>
+                                <p class="text-muted mb-0">Receive SMS reminders, medication alerts, and have your health records securely stored on blockchain.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+<section id="services" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Comprehensive Services</h2>
+            <p class="lead text-muted">Bridging healthcare gaps through technology</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Service 1 -->
+            <div id="Teleconsultations" class="col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm h-100">
+                    <div class="card-img-top">
+                        <img src="./img/download.jpg" alt="Remote doctor consultation" class="img-fluid">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 fw-bold">Teleconsultations</h3>
+                        <p class="text-muted">Connect with qualified doctors via video, audio, or chat from anywhere, even offline.</p>
+                        <ul class="text-muted ps-3">
+                            <li>24/7 access to physicians</li>
+                            <li>Specialist referrals</li>
+                            <li>Prescription services</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div id="Vaccination Tracking" class="col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm h-100">
+                    <div class="card-img-top">
+                        <img src="./img/download (1).jpg" alt="Child receiving vaccination" class="img-fluid">
+                        <div class="service-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 fw-bold">Vaccination Tracking</h3>
+                        <p class="text-muted">Automated reminders and clinic locations to ensure complete immunization.</p>
+                        <ul class="text-muted ps-3">
+                            <li>SMS/voice reminders</li>
+                            <li>Digital vaccination records</li>
+                            <li>Outbreak alerts</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 3 -->
+            <div id="Health Education" class="col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm h-100">
+                    <div class="card-img-top">
+                        <img src="./img/istockphoto-1274403122-612x612.webp" alt="Community health education" class="img-fluid">
+                        <div class="service-icon">
+                            <i class="fas fa-book-medical"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 fw-bold">Health Education</h3>
+                        <p class="text-muted">Multilingual resources on prevention and management of common conditions.</p>
+                        <ul class="text-muted ps-3">
+                            <li>Interactive chatbot</li>
+                            <li>Video tutorials</li>
+                            <li>Local language support</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 4 -->
+            <div id="Vitals Monitoring" class="col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm h-100">
+                    <div class="card-img-top">
+                        <img src="./img/download (2).jpg" alt="Woman using health monitor" class="img-fluid">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 fw-bold">Vitals Monitoring</h3>
+                        <p class="text-muted">IoT-enabled devices for remote tracking of key health indicators.</p>
+                        <ul class="text-muted ps-3">
+                            <li>Blood pressure</li>
+                            <li>Blood glucose</li>
+                            <li>Oxygen levels</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 5 -->
+            <div id="Kiosk Deployment" class="col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm h-100">
+                    <div class="card-img-top">
+                        <img src="./img/download (3).jpg" alt="Solar-powered health kiosk" class="img-fluid">
+                        <div class="service-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 fw-bold">Community Kiosks</h3>
+                        <p class="text-muted">Solar-powered health stations for areas with no internet or smartphones.</p>
+                        <ul class="text-muted ps-3">
+                            <li>Edge computing</li>
+                            <li>Local data storage</li>
+                            <li>Community operator</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm h-100">
+                    <div class="card-img-top">
+                        <img src="./img/images.jpg" alt="Blockchain technology visualization" class="img-fluid">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="h5 fw-bold">Secure Health Records</h3>
+                        <p class="text-muted">Blockchain-protected medical data with patient-controlled access.</p>
+                        <ul class="text-muted ps-3">
+                            <li>Tamper-proof records</li>
+                            <li>Emergency access</li>
+                            <li>Consent management</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Measurable Impact</h2>
+                <p class="lead text-muted">Transforming rural healthcare delivery across Africa</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="impact-icon bg-primary bg-opacity-10 text-primary mx-auto mb-3">
+                                <i class="fas fa-user-md fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">5x</h3>
+                            <p class="text-muted mb-0">Increase in doctor consultations in pilot regions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="impact-icon bg-success bg-opacity-10 text-success mx-auto mb-3">
+                                <i class="fas fa-baby fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">92%</h3>
+                            <p class="text-muted mb-0">Vaccination compliance rate with SMS reminders</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="impact-icon bg-warning bg-opacity-10 text-warning mx-auto mb-3">
+                                <i class="fas fa-clock fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">80%</h3>
+                            <p class="text-muted mb-0">Reduction in travel time for medical care</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="impact-icon bg-info bg-opacity-10 text-info mx-auto mb-3">
+                                <i class="fas fa-briefcase fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold">200+</h3>
+                            <p class="text-muted mb-0">Local jobs created for kiosk operators</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h3 class="fw-bold mb-3">Ready to bring CareNet to your community?</h3>
+                                <p class="text-muted mb-md-0">Join our network of partners and help transform healthcare access in rural Africa.</p>
+                            </div>
+                            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                <a href="#contact" class="btn btn-primary btn-lg px-4">Partner With Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimony" class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What People Are Saying</h2>
+                <p class="lead text-muted">Stories from communities we serve</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"CareNet saved my daughter's life when she had malaria. The doctor consulted us remotely and guided the local nurse on treatment."</p>
+                            <div class="testimonial-author d-flex align-items-center mt-4">
+                                <img src="./img/images (4).jpg" width="30%" alt="Amina" class="rounded-circle mr-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Amina Bello</h6>
+                                    <small class="text-muted">Mother, Rural Nigeria</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"The vaccination reminders ensure I never miss my children's immunization dates. The Igbo language support makes it easy for my mother to understand too."</p>
+                            <div class="testimonial-author d-flex align-items-center mt-4">
+                                <img src="./img/download (6).jpg" width="50%" alt="Chika" class="rounded-circle mr-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Chika Okafor</h6>
+                                    <small class="text-muted">Community Health Worker</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-rating mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="testimonial-text">"As a doctor in Lagos, I can now reach patients in remote areas. The offline capability means consultations continue even with poor internet."</p>
+                            <div class="testimonial-author d-flex align-items-center mt-4">
+                                <img src="./img/images (6).jpg" width="50%" alt="Dr. Adekunle" class="rounded-circle mr-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Dr. Adekunle Johnson</h6>
+                                    <small class="text-muted">Physician</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- Health FAQ Section -->
+<section id="faq" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Health Information Center</h2>
+            <p class="lead text-muted">Visual guides to common health concerns</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Malaria FAQ -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./img/images (1).jpg" alt="Malaria prevention" class="img-fluid h-100 object-fit-cover">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 mb-0">
+                                    <i class="fas fa-bug me-2"></i> Malaria
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="malariaAccordion">
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#malariaQ1">
+                                                <i class="fas fa-question-circle text-primary me-2"></i> Symptoms & Diagnosis
+                                            </button>
+                                        </h4>
+                                        <div id="malariaQ1" class="accordion-collapse collapse show" data-bs-parent="#malariaAccordion">
+                                            <div class="accordion-body">
+                                                <img src="./img/images (1).jpg" alt="Malaria symptoms" class="img-fluid rounded mb-3">
+                                                <p>Common symptoms include fever, chills, headache, and fatigue appearing 10-15 days after mosquito bite.</p>
+                                                <p><strong>Diagnosis:</strong> Rapid diagnostic test (RDT) or microscopy of blood sample.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#malariaQ2">
+                                                <i class="fas fa-shield-alt text-primary me-2"></i> Prevention Methods
+                                            </button>
+                                        </h4>
+                                        <div id="malariaQ2" class="accordion-collapse collapse" data-bs-parent="#malariaAccordion">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-6 mb-3">
+                                                        <img src="images/faq/mosquito-net.jpg" alt="Mosquito net" class="img-fluid rounded mb-2">
+                                                        <p class="small mb-0">Insecticide-treated nets</p>
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                        <img src="images/faq/indoor-spraying.jpg" alt="Indoor spraying" class="img-fluid rounded mb-2">
+                                                        <p class="small mb-0">Indoor residual spraying</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <img src="images/faq/mosquito-repellent.jpg" alt="Repellent" class="img-fluid rounded mb-2">
+                                                        <p class="small mb-0">Mosquito repellents</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <img src="images/faq/eliminate-breeding.jpg" alt="Eliminate breeding" class="img-fluid rounded mb-2">
+                                                        <p class="small mb-0">Remove standing water</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Maternity FAQ -->
+            <div id="maternal" class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./img/download (4).jpg" alt="Maternity care" class="img-fluid h-100 object-fit-cover">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-header bg-success text-white">
+                                <h3 class="h5 mb-0">
+                                    <i class="fas fa-baby me-2"></i> Maternity Care
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="maternityAccordion">
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#maternityQ1">
+                                                <i class="fas fa-calendar-check text-success me-2"></i> Prenatal Visits
+                                            </button>
+                                        </h4>
+                                        <div id="maternityQ1" class="accordion-collapse collapse show" data-bs-parent="#maternityAccordion">
+                                            <div class="accordion-body">
+                                                
+                                                <p><strong>Recommended schedule:</strong></p>
+                                                <ul>
+                                                    <li>1st visit: Before 12 weeks</li>
+                                                    <li>2nd visit: 24-26 weeks</li>
+                                                    <li>3rd visit: 32 weeks</li>
+                                                    <li>4th visit: 36-38 weeks</li>
+                                                </ul>
+                                                <p>More visits if high-risk pregnancy.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#maternityQ2">
+                                                <i class="fas fa-exclamation-triangle text-success me-2"></i> Danger Signs
+                                            </button>
+                                        </h4>
+                                        <div id="maternityQ2" class="accordion-collapse collapse" data-bs-parent="#maternityAccordion">
+                                            <div class="accordion-body">
+                                                <div class="alert alert-danger">
+                                                    <strong>Seek immediate care for:</strong>
+                                                    <ul class="mb-0">
+                                                        <li>Severe headache</li>
+                                                        <li>Blurred vision</li>
+                                                        <li>Vaginal bleeding</li>
+                                                        <li>Severe abdominal pain</li>
+                                                        <li>Reduced fetal movement</li>
+                                                    </ul>
+                                                </div>
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nutrition FAQ -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./img/download (5).jpg" alt="Child nutrition" class="img-fluid h-100 object-fit-cover">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-header bg-warning text-dark">
+                                <h3 class="h5 mb-0">
+                                    <i class="fas fa-apple-alt me-2"></i> Child Nutrition
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="nutritionAccordion">
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nutritionQ1">
+                                                <i class="fas fa-baby text-warning me-2"></i> First 1000 Days
+                                            </button>
+                                        </h4>
+                                        <div id="nutritionQ1" class="accordion-collapse collapse show" data-bs-parent="#nutritionAccordion">
+                                            <div class="accordion-body">
+                                                <img src="./img/download (5).jpg" alt="First 1000 days" class="img-fluid rounded mb-3">
+                                                <p><strong>Critical nutrition timeline:</strong></p>
+                                                <ul>
+                                                    <li>0-6 months: Exclusive breastfeeding</li>
+                                                    <li>6-12 months: Introduce diverse foods + breastfeeding</li>
+                                                    <li>12-24 months: Family foods + continued breastfeeding</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nutritionQ2">
+                                                <i class="fas fa-utensils text-warning me-2"></i> Complementary Foods
+                                            </button>
+                                        </h4>
+                                        <div id="nutritionQ2" class="accordion-collapse collapse" data-bs-parent="#nutritionAccordion">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-6 mb-3">
+                                                 
+                                                        <p class="small mb-0">Fortified porridge</p>
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                       
+                                                        <p class="small mb-0">Mashed vegetables</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                 
+                                                        <p class="small mb-0">Protein sources</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                     
+                                                        <p class="small mb-0">Vitamin-rich fruits</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cholera FAQ -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="./img/images (2).jpg" alt="Cholera prevention" class="img-fluid h-100 object-fit-cover">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-header bg-danger text-white">
+                                <h3 class="h5 mb-0">
+                                    <i class="fas fa-hand-holding-water me-2"></i> Cholera Prevention
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="choleraAccordion">
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#choleraQ1">
+                                                <i class="fas fa-pump-medical text-danger me-2"></i> Safe Water Practices
+                                            </button>
+                                        </h4>
+                                        <div id="choleraQ1" class="accordion-collapse collapse show" data-bs-parent="#choleraAccordion">
+                                            <div class="accordion-body">
+                                                <img src="./img/images (2).jpg" alt="Water treatment" class="img-fluid rounded mb-3">
+                                                <p><strong>Make water safe:</strong></p>
+                                                <ul>
+                                                    <li>Boil for 1 minute</li>
+                                                    <li>Use chlorine tablets</li>
+                                                    <li>Solar disinfection (SODIS)</li>
+                                                    <li>Filter through clean cloth</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="accordion-item border-0">
+                                        <h4 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#choleraQ2">
+                                                <i class="fas fa-hands-wash text-danger me-2"></i> Hygiene Steps
+                                            </button>
+                                        </h4>
+                                        <div id="choleraQ2" class="accordion-collapse collapse" data-bs-parent="#choleraAccordion">
+                                            <div class="accordion-body">
+                                                <div class="row">
+                                                    <div class="col-6 mb-3">
+                                                        
+                                                        <p class="small mb-0">Proper handwashing</p>
+                                                    </div>
+                                                    <div class="col-6 mb-3">
+                                                   
+                                                        <p class="small mb-0">Food preparation</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                     
+                                                        <p class="small mb-0">Sanitary latrines</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                 
+                                                        <p class="small mb-0">Waste management</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Download Section -->
+    <section id="download" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="./img/images (3).jpg" width="100%" alt="CareNet mobile app" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">Get the CareNet App</h2>
+                    <p class="lead text-muted mb-4">Access healthcare anytime, anywhere - even offline.</p>
+                    
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#" class="btn btn-dark btn-lg px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-apple fa-2x me-2"></i>
+                                <div class="text-start">
+                                    <small class="d-block">Download on the</small>
+                                    <strong>App Store</strong>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="btn btn-dark btn-lg px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fab fa-google-play fa-2x me-2"></i>
+                                <div class="text-start">
+                                    <small class="d-block">Get it on</small>
+                                    <strong>Google Play</strong>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card bg-light border-0">
+                        <div class="card-body p-4">
+                            <h4 class="h5 fw-bold mb-3">USSD Access</h4>
+                            <p class="mb-3">Don't have a smartphone? Dial <span class="badge bg-dark">*123*45#</span> to access CareNet services from any mobile phone.</p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-mobile-alt fa-2x me-3 text-muted"></i>
+                                <div>
+                                    <small class="d-block text-muted">Supported by all major carriers</small>
+                                    <small class="d-block text-muted">Available in English, Igbo, and more</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-4">
+                        <i class="fas fa-heartbeat me-2"></i>CareNet
+                    </h3>
+                    <p>Offline-ready, solar-powered telehealth platform bringing quality healthcare to rural African communities through innovative technology.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h4 class="h6 fw-bold mb-4">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="#features" class="text-white-50">Features</a></li>
+                        <li class="mb-2"><a href="#how-it-works" class="text-white-50">How It Works</a></li>
+                        <li class="mb-2"><a href="#impact" class="text-white-50">Impact</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="h6 fw-bold mb-4">Services</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#Teleconsultations" class="text-white-50">Teleconsultations</a></li>
+                        <li class="mb-2"><a href="#Vaccination Tracking" class="text-white-50">Vaccination Tracking</a></li>
+                        <li class="mb-2"><a href="#Health Education" class="text-white-50">Health Education</a></li>
+                        <li class="mb-2"><a href="#Vitals Monitoring" class="text-white-50">Vitals Monitoring</a></li>
+                        <li class="mb-2"><a href="#Kiosk Deployment" class="text-white-50">Kiosk Deployment</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="h6 fw-bold mb-4">Contact Us</h4>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Ebonyi, Nigeria</li>
+                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +234 9135 283 863</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@carenet.africa</li>
+                        <li class="mb-2"><i class="fas fa-globe me-2"></i> www.carenet.africa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2025 CareNet. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white-50 me-3">Privacy Policy</a>
+                        <a href="#" class="text-white-50">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+    <!-- Scripts -->
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="./app.js"></script>
+    <script src="./chatbot.js"></script>
+    <script src="service-worker.js"></script>
+    
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('js/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+
+<!-- Floating Doctor Chatbot -->
+<div id="doctorChatbot" class="doctor-chatbot">
+    <div class="doctor-avatar pulse-animation">
+        <img src="./img/images (6).jpg" alt="Doctor Avatar" class="img-fluid">
+        <div class="online-status"></div>
+    </div>
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="doctor-info">
+                <img src="./img/images (6).jpg" alt="Doctor" width="40">
+                <div>
+                    <h6>Dr. Adebayo</h6>
+                    <small class="text-success">
+                        <i class="fas fa-circle"></i> Online
+                    </small>
+                </div>
+            </div>
+            <button class="btn-close-chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="message doctor-message">
+                <div class="message-content">
+                    <p>Hello! I'm Dr. Adebayo, your CareNet health assistant. How can I help you today?</p>
+                    <div class="quick-actions">
+                        <button class="btn-quick-action" data-action="malaria">
+                            <i class="fas fa-bug"></i> Malaria
+                        </button>
+                        <button class="btn-quick-action" data-action="pregnancy">
+                            <i class="fas fa-baby"></i> Pregnancy
+                        </button>
+                        <button class="btn-quick-action" data-action="nutrition">
+                            <i class="fas fa-apple-alt"></i> Nutrition
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your health question..." class="form-control">
+            <button class="btn-send">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
